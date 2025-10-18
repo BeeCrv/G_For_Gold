@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>G for Gold - 3-Tree Stack</title>
+    <link rel="icon" type="image/jpg" href="/images/g_4gold.jpg">
+    <link rel="apple-touch-icon" href="/images/g_4gold.jpg">
+    <link rel="stylesheet" href="/CSS/Style.css">
+</head>
+<body>
+    <!-- Background Image Container -->
+    <div class="background-container">
+        <img src="../images/g_4gold.jpg" alt="G for Gold Background" class="background-image">
+        <div class="overlay"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Header with Logo -->
+        <header class="app-header">
+            <div class="logo-container">
+                <div class="logo">G</div>
+                <div class="logo-text">
+                    <h1>for Gold</h1>
+                    <p class="tagline">3-Tree Stack Algorithm</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="description-section">
+                <h2>Welcome to the Gold Network</h2>
+                <p>Build your network where each member brings 3 new people. When a leader moves up, the next in command takes their place - just like a golden opportunity!</p>
+            </section>
+            
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="controls">
+                    <button id="addPerson" class="btn-gold">
+                        <span class="btn-icon">+</span>
+                        Add 3 Members
+                    </button>
+                    <button id="removeLeader" class="btn-gold">
+                        <span class="btn-icon">↑</span>
+                        Promote Next Leader
+                    </button>
+                    <button id="reset" class="btn-gold-outline">
+                        <span class="btn-icon">↺</span>
+                        Reset Network
+                    </button>
+                </div>
+            </section>
+            
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-value" id="totalCount">1</div>
+                        <div class="stat-label">Total Members</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">👑</div>
+                        <div class="stat-value" id="leaderId">1</div>
+                        <div class="stat-label">Current Leader</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value" id="levelCount">1</div>
+                        <div class="stat-label">Network Levels</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-value" id="potentialEarnings">₵0</div>
+                        <div class="stat-label">Potential Value</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Visualization Section -->
+            <section class="visualization-section">
+                <h3>Your Golden Network</h3>
+                <div class="tree-container">
+                    <div class="network-logos">
+                        <img src="../images/GGO.jpg" alt="GGO Logo" class="network-logo">
+                        <img src="../images/Dolar-Goid.jpg" alt="Dolar-Goid Logo" class="network-logo">
+                    </div>
+                    <!-- Tree nodes will be rendered here -->
+                </div>
+            </section>
+            
+            <!-- Explanation Section -->
+            <section class="explanation-section">
+                <div class="explanation-card">
+                    <h3>How the Golden Network Works</h3>
+                    <div class="rules">
+                        <div class="rule">
+                            <div class="rule-icon">1</div>
+                            <p>Each member can bring exactly <strong>3 new people</strong> into the network</p>
+                        </div>
+                        <div class="rule">
+                            <div class="rule-icon">2</div>
+                            <p>New members join under the current leader's branch</p>
+                        </div>
+                        <div class="rule">
+                            <div class="rule-icon">3</div>
+                            <p>When the leader moves up, the next qualified member takes their place</p>
+                        </div>
+                        <div class="rule">
+                            <div class="rule-icon">4</div>
+                            <p>The structure maintains a balanced golden ratio of growth</p>
+                        </div>
+                    </div>
+                    
+                    <div class="math-example">
+                        <h4>Golden Growth Mathematics</h4>
+                        <div class="math-grid">
+                            <div class="math-item">
+                                <div class="math-level">Level 0</div>
+                                <div class="math-value">1 member</div>
+                            </div>
+                            <div class="math-item">
+                                <div class="math-level">Level 1</div>
+                                <div class="math-value">3 members</div>
+                            </div>
+                            <div class="math-item">
+                                <div class="math-level">Level 2</div>
+                                <div class="math-value">9 members</div>
+                            </div>
+                            <div class="math-item">
+                                <div class="math-level">Level 3</div>
+                                <div class="math-value">27 members</div>
+                            </div>
+                            <div class="math-item highlight">
+                                <div class="math-level">Level n</div>
+                                <div class="math-value">3<sup>n</sup> members</div>
+                            </div>
+                            <div class="math-item highlight">
+                                <div class="math-level">Total</div>
+                                <div class="math-value">(3<sup>n+1</sup> - 1)/2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>G for Gold &copy; 2024 - Building Golden Opportunities Together</p>
+        </footer>
+    </div>
+
+    <script src="js/TreeStack.js"></script>
+    <script src="js/visualization.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
